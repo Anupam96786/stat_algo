@@ -14,6 +14,14 @@ def mymean(lst):
     return sum(lst)/len(lst)
 
 
+def mymedian(lst):
+    lst.sort()
+    if(len(lst)%2 != 0):
+        return lst[len(lst)//2]
+    else:
+        return (lst[(len(lst)//2)-1] + lst[len(lst)//2])/2
+
+
 if __name__ == "__main__":
     import numpy as np
     speed = [32,111,138,28,59,77,97]
@@ -43,3 +51,13 @@ if __name__ == "__main__":
         print('mymean is ok...')
     else:
         print('something went wrong in mymean...')
+    del mean, mymean
+    
+    # checking mymedian
+    median = np.median(speed)
+    mymedian = mymedian(speed)
+    if mymedian == median:
+        print('mymedian if ok...')
+    else:
+        print('something went wrong in mymedian...')
+    del mymedian, median
