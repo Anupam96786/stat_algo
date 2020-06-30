@@ -10,6 +10,10 @@ def myvar(lst):
     return var
 
 
+def mymean(lst):
+    return sum(lst)/len(lst)
+
+
 if __name__ == "__main__":
     import numpy as np
     speed = [32,111,138,28,59,77,97]
@@ -31,3 +35,11 @@ if __name__ == "__main__":
     else:
         print('something went wrong in myvar...')
     del var, myvar
+
+    # checking mymean
+    mean = np.mean(speed)
+    mymean = mymean(speed)
+    if mymean == mean:
+        print('mymean is ok...')
+    else:
+        print('something went wrong in mymean...')
