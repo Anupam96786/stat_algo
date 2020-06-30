@@ -1,2 +1,2 @@
-# machine_learning
+# Algorithms of statistics
  
