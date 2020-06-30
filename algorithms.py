@@ -22,6 +22,10 @@ def mymedian(lst):
         return (lst[(len(lst)//2)-1] + lst[len(lst)//2])/2
 
 
+def mymode(lst):
+    return max(set(lst), key=lst.count)
+
+
 if __name__ == "__main__":
     import numpy as np
     speed = [32,111,138,28,59,77,97]
@@ -61,3 +65,5 @@ if __name__ == "__main__":
     else:
         print('something went wrong in mymedian...')
     del mymedian, median
+
+    
